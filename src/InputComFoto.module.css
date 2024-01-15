@@ -8,9 +8,21 @@
     height: 100vh;
 }
 
+.container {
+    background-color: yellow;
+}
+
 .divInputImage {
     background-color: gray;
     margin: 0 auto;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    
+}
+
+.imagem {
+    margin: 0 auto; 
     width: 300px;
     height: 300px;
     border-radius: 50%;
