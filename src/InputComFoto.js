@@ -6,6 +6,7 @@ import imagem from './images/victor.jpg'
 import camera from './images/camera (2).png'
 
 function InputComFoto() {
+    'use strict'
 
     useEffect(() => {
         let input = document.getElementById('flImage');
@@ -16,6 +17,18 @@ function InputComFoto() {
         //Ele simula o comportamento de montagem e desmontagem do componente e as vezes ele duplica algumas paradas e ações.
         photo.addEventListener('click', () => {
             input.click();
+        });
+
+        input.addEventListener('change', (event) => {
+            let reader = new FileReader();
+
+            reader.onload = () => {
+                photo.src = reader.result;
+            }
+
+            //Aqui busca todos os arquivos selecionados se tiver mais de um(imagens selecionadas)
+            //e retorna o que estiver na posição zero...
+            reader.readAsDataURL(input.files[0]);
         })
     }, [])
 
