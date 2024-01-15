@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/treinosreact/static/css/main.2c21f270.css",
+    "main.js": "/treinosreact/static/js/main.06b55811.js",
+    "index.html": "/treinosreact/index.html",
+    "main.2c21f270.css.map": "/treinosreact/static/css/main.2c21f270.css.map",
+    "main.06b55811.js.map": "/treinosreact/static/js/main.06b55811.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2c21f270.css",
+    "static/js/main.06b55811.js"
+  ]
+}
