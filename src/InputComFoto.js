@@ -1,8 +1,24 @@
 import styles from './InputComFoto.module.css';
 
+import { useEffect } from 'react';
+
 import imagem from './images/victor.jpg'
+import camera from './images/camera (2).png'
 
 function InputComFoto() {
+
+    useEffect(() => {
+        let input = document.getElementById('flImage');
+        let photo = document.getElementById('image');
+
+        //Código dentro do useEffect para não dar erro.
+        //Se o input type estiver abrindo mais de uma vez exclua o StrictMode no index.js
+        //Ele simula o comportamento de montagem e desmontagem do componente e as vezes ele duplica algumas paradas e ações.
+        photo.addEventListener('click', () => {
+            input.click();
+        })
+    }, [])
+
     return(
     <div className={styles.main}>
 
@@ -10,10 +26,15 @@ function InputComFoto() {
     <br/><br/><br/>
 
     <div className={styles.container}>
+
         <div className={styles.divInputImage}>
-            <img src={imagem} alt="imagem" className={styles.imagem}/>
+            <img src={camera} alt="imagem" className={styles.imagem} id="image"/>
         </div>
+
+    <input type="file" id="flImage" name="flImage" accept="images/*" />
     </div>
+
+
     </div>
     )
 }
